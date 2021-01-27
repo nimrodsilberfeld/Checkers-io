@@ -1,4 +1,5 @@
-const url = "http://localhost:3000"
+// const url = "http://localhost:3000"
+const url="https://nim-checkers-io.herokuapp.com"
 let loginButton = document.getElementById("login_button")
 let login_email_input = document.getElementById('login_email_input')
 let login_password_input = document.getElementById('login_password_input')

@@ -1,6 +1,7 @@
 
 const socket = io()
-const url = "http://localhost:3000"
+// const url = "http://localhost:3000"
+const url= "https://nim-checkers-io.herokuapp.com"
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("id");
 const thisRoom = urlParams.get("room");

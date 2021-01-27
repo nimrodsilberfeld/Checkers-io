@@ -1,5 +1,6 @@
 const socket = io()
-const url = "http://localhost:3000"
+// const url = "http://localhost:3000"
+const url = "https://nim-checkers-io.herokuapp.com"
 const li = document.getElementsByTagName("li")
 let invitedPlayer = ''
 let userSocketId = ''
@@ -184,7 +185,7 @@ socket.on('confirm-play', (data) => {
     console.log("players on room")
     console.log(data.playeresInRoom)
 
-    location.href = "http://localhost:3000/checkers.html?id=" + socket.id + "&room=" + data.room + "&mongoId=" + id + ""
+    location.href = "https://nim-checkers-io.herokuapp.com/checkers.html?id=" + socket.id + "&room=" + data.room + "&mongoId=" + id + ""
 
 })
 
