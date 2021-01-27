@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Xanh Mono', sans-serif; */
+}
+
+header {
+    background: linear-gradient(140deg, #2e60a1, #7834a2);
+    height: 5rem;
+    /* display: flex; */
+    /* justify-content:space-between; */
+    /* align-items: center; */
+}
+
+#header-content {
+    display: flex;
+    justify-content: space-between;
+    width: -90%;
+    
+}
+
+#title {
+    text-align: center;
+}
+
+#title a {
+    color: #f1faee;
+    text-decoration: none;
+    font-size: 60px;
+    font-family: 'Lobster', sans-serif;
+  
+}
+
+#title a:hover {
+    color: black;
+}
+
+#disconnect {
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    padding: 10px 10px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    align-self: center;
+    margin-right: 15px;
+}
+
+#disconnect:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

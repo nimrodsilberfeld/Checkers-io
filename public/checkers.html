@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titleScreen">Live test</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="backdrop"></div>
+    <div class="modal">
+        <h1 id="modal__title"></h1>
+        <a id="backToLobby">Back to Lobby</a>
+    </div>
+    <div id="game-board">
+        <table>
+        </table>
+
+        <h2 id="error-Message2"></h2>
+    </div>
+    <div class="desktop">
+        <p id="divider">|</p>
+    </div>
+    <div id="desktop-content">
+        <div id="red-turn-text">
+        </div>
+        <div id="black-turn-text">
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/ui.js" type="module"></script>
+
+
+</body>
+
+</html>

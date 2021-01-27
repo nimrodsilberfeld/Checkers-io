@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div id="title">
+            <a href="./index.html">Checkers</a>
+        </div>
+    </header>
+    <!-- <form id="loginForm">
+        <input type="text" placeholder="name" name="username" id="inputUsername">
+        <button id="login">To lobby</button>
+    </form> -->
+    <div id="id01" class="modal">
+        <form class="modal-content animate">
+            <!-- <div class="imgcontainer">
+                <span class="close" title="Close Modal">&times;</span>
+            </div> -->
+
+            <div class="container">
+                <label for="uname"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="uname" class="modal_input" id="login_email_input"
+                    required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" class="modal_input"
+                    id="login_password_input" required>
+
+                <button type="submit" id="login_button">Login</button>
+            </div>
+            <p class="error_message">Somthing went wrong</p>
+            <div class="container container-buttom" style="background-color:#f1f1f1">
+
+                <span class="psw"> <button id="signUp_button">Sign Up!</button></span>
+            </div>
+        </form>
+    </div>
+
+    
+    <div id="id02" class="modal" style="display: none;">
+        <form class="modal-content signUp_modal animate">
+            <!-- <div class="imgcontainer">
+                <span class="close" title="Close Modal"
+                    onclick="document.getElementById('id02').style.display='none'">&times;</span>
+            </div> -->
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="sign_name_input" class="modal_input sign_name_input"
+                    required>
+
+                <label for="email"><b>Email</b> </label>
+                <input type="email" placeholder="Enter Email" id="sign_email_input" class="modal_input sign_email_input" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Minimum 7 letters" name="psw"
+                   id="sign_password_input" class="modal_input sign_password_input" required>
+
+                <button type="submit" id="signMeUp_button">Sign me up</button>
+            </div>
+            <p class="error_message">Somthing went wrong</p>
+            <div class="container container-buttom" style="background-color:#f1f1f1">
+
+                <span class="psw"> <button id="login_form_button">Login</button></span>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/lobby.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="wall" src="./img/wall.jpg" alt="">
+    <header>
+        <div id="header-content">
+            <div style="visibility: hidden;">aa</div>
+            <div id="title">
+                <a href="./index.html">CheckerS</a>
+            </div>
+            <button id="disconnect">Disconnect</button>
+        </div>
+    </header>
+
+
+    <div id="lobby">
+        <div id="usersLoggin">
+        </div>
+        <div id="invitation-modal" style="display: none;">
+            <h2 id="invite"></h2>
+        </div>
+        <div id="gotInvite-modal" style="display: none;">
+            <h2 id="gotInvite">Got an invitation from Nimrod</h2>
+            <button id="acceptButton">Join Game</button>
+            <button id="declineGame">Decline</button>
+        </div>
+
+        <div id="profile">
+            <img src="./img/smoke.png" alt="">
+            <div id="profile-info">
+                <div id="name-background">
+                    <p id="nameOfUser-info"> </p>
+                </div>
+                <div id="gaming-info">
+                    <p id="rating-info"> </p>
+                    <p id="numofGames-info"></p>
+                    <p id="numofWines-info"></p>
+                    <p id="numofLoses-info"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="lobby-users-template" type="text/html">
+        <h1>Connected Users</h1>
+        <div id="scroll-users">
+            <p>Name</p>
+            <p>Rating</p>
+        </div>
+        <ul class="users">
+        {{#users}}
+        <li id={{id}}>
+        <div id="user_info">
+           
+           <p id="name"> {{username}}</p> 
+           <p id="rate"> {{rating}}</p>
+        </div>
+        </li>
+     
+        {{/users}}
+    </ul>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/lobby.js"></script>
+</body>
+
+</html>
