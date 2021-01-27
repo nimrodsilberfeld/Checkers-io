@@ -1,5 +1,5 @@
-// const url = "http://localhost:3000"
-const url="https://nim-checkers-io.herokuapp.com"
+//const url = "http://localhost:3000"
+const url = "https://nim-checkers-io.herokuapp.com"
 let loginButton = document.getElementById("login_button")
 let login_email_input = document.getElementById('login_email_input')
 let login_password_input = document.getElementById('login_password_input')
@@ -62,17 +62,17 @@ signMeUp_button.addEventListener('click', (e) => {
     }
     console.log(userData)
     postUser(url + "/users", userData)
-    .then(data => {
-        console.log(data)
-        console.log(data.token)
-        console.log(data.user.name)
-        sessionStorage.setItem("token", data.token)
-        sessionStorage.setItem("name", data.user.name)
-        sessionStorage.setItem("id", data.user._id)
-        location.href = `./lobby.html?username=${data.user.name}&id=${data.user._id}`
-    }).catch((err) => {
-        error_message.style.display = "block"
-    })
+        .then(data => {
+            console.log(data)
+            console.log(data.token)
+            console.log(data.user.name)
+            sessionStorage.setItem("token", data.token)
+            sessionStorage.setItem("name", data.user.name)
+            sessionStorage.setItem("id", data.user._id)
+            location.href = `./lobby.html?username=${data.user.name}&id=${data.user._id}`
+        }).catch((err) => {
+            error_message.style.display = "block"
+        })
 })
 
 signUp_button.addEventListener('click', (e) => {

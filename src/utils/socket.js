@@ -1,4 +1,5 @@
 
+// const { io } = require('../index')
 const { addUser, getAllConnectedUsers, getUser, removeUser, getUsersInRoom } = require('../utils/users')
 const { update_num_of_losses, update_num_of_wins, findUser } = require('../index')
 let currentPlayer
@@ -7,6 +8,8 @@ module.exports = function (io) {
 
     io.on('connection', (socket) => {
         console.log("new web socket connection")
+
+
 
         socket.on('join', async (id) => {
             let ID = id.userId
@@ -52,6 +55,8 @@ module.exports = function (io) {
                 socket.emit("inMiddleOfAgame", ({ invitedPlayer }))
             }
 
+
+
         })
         socket.on("confirm-game-invitation", (data) => {
             console.log(data)
@@ -60,7 +65,10 @@ module.exports = function (io) {
                 socket.join(room)
                 const user1 = getUser(socket.id)
                 const user2 = getUser(data.socketId)
+
                 console.log("============")
+                // update_num_of_games(user1.userId)
+                // update_num_of_games(user2.userId)
                 console.log("============")
                 console.log("confirm game invitation!!!!")
                 console.log(user1)
@@ -131,11 +139,9 @@ module.exports = function (io) {
         })
 
 
-        socket.on('disconnect', () => {
-            removeUser(socket.id)
-            io.emit('LobbyData', {
-                users: getAllConnectedUsers()
-            })
-        })
+        // socket.on('disconnect', () => {
+        //     removeUser(socket.id)
+
+        // })
     })
 }
